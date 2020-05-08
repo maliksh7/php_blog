@@ -11,14 +11,14 @@
 		Login to continue
 	</h2>
 
-	<form action="login.php" metho="POST" >
+	<form action="login.php" method="POST" >
 		<h2>Login</h2>
 		<input type="text" name="username">
 		<input type="password" name="password">
 		<input type="submit" name="Login">
 	</form>
 
-	<form action="register.php" metho="POST">
+	<form action="register.php" method="POST">
 		<h2>Register</h2>
 		<input type="text" name="username">
 		<input type="password" name="password">

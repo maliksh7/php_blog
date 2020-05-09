@@ -54,6 +54,6 @@
 	</b>
 	<?php } else { ?>
 		<h1>Login Karo Bhai </h1>
-<?php } ?>
+	<?php } ?>
 </body>
 </html>

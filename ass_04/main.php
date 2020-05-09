@@ -10,7 +10,9 @@
 </head>
 <body>
 
-	<?php if(isset($_SESSION["username"])){ ?>
+	<?php 
+	session_start();
+	if(isset($_SESSION["username"])){ ?>
 	<h1>Main Page</h1>
 	<h2>WELLCOME</h2>
 	<form style="font-size: x-large;" action="next.php" method="POST" target="blank">
@@ -53,7 +55,7 @@
 		3)  <a href="updateTable.php">Update Table</a>
 	</b>
 	<?php } else { ?>
-		<h1>Login Karo Bhai </h1>
+		<h1>User Not Found...! </h1>
 <?php } ?>
 </body>
 </html>

@@ -8,7 +8,7 @@
 		}
 	</style>
 </head>
-<body>
+<body style="background-color: gray;">
 
 	<?php 
 	session_start();

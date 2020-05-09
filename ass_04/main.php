@@ -55,7 +55,12 @@
 		3)  <a href="updateTable.php">Update Table</a>
 	</b>
 	<?php } else { ?>
+<<<<<<< HEAD
+		<h1>Login Karo Bhai </h1>
+	<?php } ?>
+=======
 		<h1>User Not Found...! </h1>
 <?php } ?>
+>>>>>>> 00066c9911dba06783ddddc4efb9ff5cec109a6e
 </body>
 </html>

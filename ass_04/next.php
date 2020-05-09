@@ -23,15 +23,26 @@
 	 ?>
 	 <br><br>
 
-	<form action="" method="POST">
-		<fieldset>
+	<fieldset>
 			<legend>
 				Select: 
 			</legend>
-			1) <button>Approve</button><br><br>
-			2) <button>Cancel</button>
+			
+			<form action="addTODB.php" method="POST">
+				<input type="hidden" name="user" value="<?php echo $user ?>">
+				<input type="hidden" name="pass" value="<?php echo $pass ?>">
+				<input type="hidden" name="city" value="<?php echo $city ?>">
+				<input type="hidden" name="field" value="<?php echo $field ?>">
+				<input type="hidden" name="info" value="<?php echo $info ?>">
+				1) <button type="submit">Approve</button><br><br>
+			</form>
+
+			<form action="main.php">
+				2) <button type="submit">Cancel</button>
+			</form>
+
 		</fieldset>
-	</form>
+	
 
 </body>
 </html>

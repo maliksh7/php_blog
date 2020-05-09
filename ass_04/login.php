@@ -18,7 +18,7 @@
 			if (($row['name'] == $username) && ($row['pass'] == $password)) {
 				echo "<br>User & Password matches..!";
 				$_SESSION['username'] = $username;
-				header("location:home.php");
+				header("location:main.php");
 			} else {
 				echo "<br>Password does not match";
 			}

@@ -4,7 +4,9 @@
 	<title>Update Table</title>
 </head>
 <body>
-
+	<?php 
+	session_start();
+	if(isset($_SESSION["username"])){ ?>
 	<h1>Welcome...!</h1>
 	<h2>Update Table</h2>
 
@@ -33,6 +35,7 @@
 			<input type="text" name="Cname" placeholder="Column Name"> <br><br>
 			
 			<input type="submit" name="submit">
+			<input type="submit" name="Logout">
 			</b>
 	
 		</fieldset>
@@ -82,7 +85,26 @@
 
 
 
-	</fieldset>
+	</fieldset> <br><br>
+
+	<form action="" method="POST">
+		<fieldset>
+			<b>Want to Log Out ?</b><br><br> 
+
+			<input type="submit" name="logout" value="Logout">
+			<?php 
+
+				if (isset($_POST['logout'])) {
+					session_destroy();
+				}
+
+			 ?>
+		</fieldset>
+	</form>
+	<?php } else { ?>
+
+		<h1>User Not Found...! </h1>
+<?php } ?>
 
 </body>
 </html>

@@ -48,6 +48,22 @@
 		</fieldset>
 	</form> <br><br>
 
+	<form action="" method="POST">
+		<fieldset>
+			<b>Want to Log Out ?</b><br><br> 
+
+			<input type="submit" name="logout" value="Logout">
+			<?php 
+
+				if (isset($_POST['logout'])) {
+					session_destroy();
+				}
+
+			 ?>
+		</fieldset>
+	</form>
+
+	<br><br>
 	<h3>Links: </h3> 
 	<b>
 		1)  <a href="update.php" >Update</a><br><br>

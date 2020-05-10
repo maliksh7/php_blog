@@ -19,8 +19,9 @@
 			<label>Username: </label>
 			<input type="text" name="username"> <br><br>
 			<label>Password: </label>
-			<input type="password" name="pass"> 
-			<input type="submit" name="submit">
+			<input type="password" name="pass"> <br><br>
+			<input type="submit" name="submit"> <br><br>
+	
 		</fieldset>
 	</form>
 

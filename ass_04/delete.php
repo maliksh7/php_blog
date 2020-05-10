@@ -4,7 +4,9 @@
 	<title>Delete Page</title>
 </head>
 <body>
-
+	<?php 
+	session_start();
+	if(isset($_SESSION["username"])){ ?>
 	<h1>Delete Page</h1>
 	<h3>Choose What to delete</h3><br><br>
 	<form method="POST">
@@ -21,7 +23,22 @@
 			<input type="submit" name="UPDATE!" value="DELETE">
 		</fieldset>
 
-	</form>	
+	</form>	<br><br>
+
+	<form action="" method="POST">
+		<fieldset>
+			<b>Want to Log Out ?</b><br><br> 
+
+			<input type="submit" name="logout" value="Logout">
+			<?php 
+
+				if (isset($_POST['logout'])) {
+					session_destroy();
+				}
+
+			 ?>
+		</fieldset>
+	</form>
 
 	<?php 
 
@@ -57,6 +74,9 @@
 
 	?>	
 
+	<?php } else { ?>
 
+		<h1>User Not Found...! </h1>
+<?php } ?>
 </body>
 </html>

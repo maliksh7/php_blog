@@ -17,6 +17,5 @@
 		echo "<h1>  Connected </h1></br>";
 	}
 	// endoffile
-
-
+	
  ?>

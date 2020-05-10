@@ -23,23 +23,6 @@
 			<input type="submit" name="submit">
 		</fieldset>
 	</form>
-	<br><br>
-	<h2>
-		Register if not logged in
-	</h2>
-	<form action="register.php" method="POST">
-		<fieldset>
-			<legend>
-				Register:
-			</legend>
-			<label>Username: </label>
-			<input type="text" name="username"> <br><br>
-			<label>Password: </label>
-			<input type="password" name="pass"> 
-			<input type="submit" name="submit">			
-		</fieldset>
-	</form>
-
 
 </body>
 </html>

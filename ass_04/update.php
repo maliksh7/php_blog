@@ -5,26 +5,55 @@
 </head>
 <body>
 
+	<h2>Welcome!</h2>
+	<h3>Update your records here...</h3>
+
 	<form action="" method="POST">
 		
-		Enter Name to Update: <input type="text" name="toupdate">
+		<fieldset>
+		
+		<label>Enter Name to Update : </label>
+		<input type="text" name="toupdate" placeholder="Name">
 
 		<h2> What to update </h2>
 
-		Username : <input type="text" name="username" value="">
-		Password : <input type="text" name="pass" value="">
-		City     : <input type="text" name="city" value="">
-		Field    : <input type="text" name="field" value="">
+		 
+		<label>Username : </label>
+		<input type="text" name="username" placeholder="New Username"> <br><br>
+
+
+		<label>Password : </label>
+		<input type="text" name="pass" placeholder="New Password"> <br><br>
+
+		
+		<label>City : </label>
+		<input type="text" name="city" list="city" placeholder="New City">
+			<datalist id="city">
+				<option value="Peshawar">
+				<option value="Islamabad">
+				<option value="Lahore">
+				<option value="Karachi">
+			</datalist> <br><br>
+
+	
+		<label>Department : </label>
+		<input type="text" name="field" list="field" placeholder="New Department">
+			<datalist id="field">
+				<option value="Computer Science">
+				<option value="Software Engineering">
+				<option value="Electrical Engineering">
+			</datalist> <br><br>
 
 		<input type="submit" name="UPDATE!" value="UPDATE">
 	</form>
 
+	</fieldset>
+	<br><br><br>
+	<fieldset>
 
 	<?php if(isset($_POST['toupdate'])){
 
 		include 'connect.php';
-
-		echo "hey";
 
 		$toUpdate = $_POST['toupdate'];
 
@@ -33,12 +62,6 @@
 		$city = $_POST['city'];
 		$field= $_POST['field'];
 
-		// echo $toUpdate;
-		// echo $user."<br>";
-		// echo $pass."<br>";
-		// echo $city."<br>";
-		// echo $field."<br>";
-		// echo $info."<br>";
 
 		$qry = "";
 
@@ -46,29 +69,36 @@
 			$qry = "update data set username='$user', password='$pass', city='$city', field='$field' where username='$toUpdate'";
 			echo $qry;
 		} elseif ($user != "" && $pass != "" && $city != "") {
-			# code...
 			$qry = "update data set username='$user', password='$pass', city='$city' where username='$toUpdate'";
 			echo $qry;
 		} elseif ($user != "" && $pass != "") {
 			$qry = "update data set username='$user', password='$pass' where username='$toUpdate'";
 			echo $qry;
 		} elseif ($user != "") {
-			# code...
 			$qry = "update data set username='$user' where username='$toUpdate'";
 			echo $qry;
 		} elseif ($pass != "") {
 			$qry = "update data set password='$pass' where username='$toUpdate'";
+			echo $qry;
+		} elseif ($city != "") {
+			$qry = "update data set city='$city' where username='$toUpdate'";
+			echo $qry;
+		} elseif ($field != "") {
+			$qry = "update data set field='$field' where username='$toUpdate'";
 			echo $qry;
 		} else {
 			echo "Nothing";	
 		}
 
 		if($conn->query($qry)) {
-			echo "Updated";
+			echo "<br>[* ] - Data Updated";
 		} else {
-			echo "Failed updating";
+			echo "<br>[* ] - Failed to Update data";
 		}
-	} ?>
+
+	 }?>
+
+	 </fieldset>
 
 </body>
 </html>

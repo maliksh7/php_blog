@@ -3,7 +3,7 @@
 
 	session_start();
 	include 'connect.php';
-
+	
 	print_r($_POST);
 	$username = $_POST['username'];
 	$pass     = $_POST['pass'];
